@@ -23,4 +23,24 @@ Class Login Extends BaseController
         .view('pages/inicio')
         .view('componentes/footer_view');
     }
+
+    public function exposiciones(){
+
+        $data['titulo'] = 'Exposiciones';
+
+        return view('componentes/nav_view',$data)
+        .view('pages/exposiciones')
+        .view('componentes/footer_view');
+    }
+
+    public function inscripciones(){
+
+        $data['titulo'] = 'Inscripciones';
+        $data['css'] = 'inscripciones';
+        $data['script'] = 'formulario';
+
+        return view('componentes/nav_view',$data)
+        .view('pages/inscripciones')
+        .view('componentes/footer_view');
+    }
 }
